@@ -1,6 +1,4 @@
-form {
-    /* border: 3px solid #f1f1f1; */
-}
+
 
 input[type=text], input[type=password] {
     width: 100%;
@@ -20,6 +18,17 @@ button {
     cursor: pointer;
     width: 100%;
 }
+
+input[type=submit]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
 
 button:hover {
     opacity: 0.8;
@@ -52,7 +61,7 @@ span.psw {
 
 .loginContainer{
     /* width: 50hw; */
-    width: 30%;
+    width: 386px;
     margin-left: 35%;
 }
 
