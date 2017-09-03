@@ -1,0 +1,13 @@
+header{
+    text-align: right;
+    padding: 20px 20px;
+    font-size: 30px;
+    border-bottom: 2px solid #eee;
+    position: fixed;
+    width:100%;
+    z-index: 99;
+}
+
+.alignMore{
+    padding: 50px;
+}
