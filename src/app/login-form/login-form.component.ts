@@ -9,9 +9,12 @@ import { UserService } from '../user.service';
 })
 export class LoginFormComponent implements OnInit {
 
-  constructor( private router: Router, private user:UserService) { }
+  constructor( private router: Router, private user:UserService) {
+   }
 
   ngOnInit() {
+    
+    
   }
 
   loginUser(e){
@@ -22,6 +25,9 @@ export class LoginFormComponent implements OnInit {
     if( username=="admin" && password=="admin"){
       this.user.setUserLoggedIn();
       this.router.navigate(['dash']);
+    }else{
+      alert("Failed Login");
+      this.router.navigate(['']);
     }
 
   }
