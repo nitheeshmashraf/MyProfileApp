@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashComponent } from './dash/dash.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 import {  UserService } from './user.service';
 
@@ -21,6 +22,10 @@ const approutes:Routes=[
   {
     path: '',
     component:LoginFormComponent
+  },
+  {
+    path: '**',
+    component:NotFoundComponent
   }
 ]
 
@@ -30,7 +35,8 @@ const approutes:Routes=[
     HeaderComponent,
     LoginFormComponent,
     FooterComponent,
-    DashComponent
+    DashComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
