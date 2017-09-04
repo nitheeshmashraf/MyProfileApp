@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class UserService {
 
-  
+  private messageSource= new BehaviorSubject<string>("default Message");
+  currentMessage= this.messageSource.asObservable();
+
   private isUserLoggedIn = false;
-  private username;
   
   constructor() {
     this.isUserLoggedIn=false;
@@ -17,6 +19,10 @@ export class UserService {
 
    getUserLoggedIn(){
      return this.isUserLoggedIn;
+   }
+
+   changeMessage(message:string){
+     this.messageSource.next(message);
    }
 
 }

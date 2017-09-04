@@ -17,6 +17,11 @@ export class LoginFormComponent implements OnInit {
     
   }
 
+  newMessage(){
+    this.user.changeMessage("User Logged");
+    
+  }
+
   loginUser(e){
     e.preventDefault();
     console.log(e);
@@ -25,6 +30,7 @@ export class LoginFormComponent implements OnInit {
     if( username=="admin" && password=="admin"){
       this.user.setUserLoggedIn();
       this.router.navigate(['dash']);
+      this.user.changeMessage(username);
     }else{
       alert("Failed Login");
       this.router.navigate(['']);

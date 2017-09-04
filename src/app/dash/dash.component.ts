@@ -9,8 +9,10 @@ import { UserService } from '../user.service';
 export class DashComponent implements OnInit {
 
   constructor( private user:UserService) { }
+  LoggedInAs:string;
 
   ngOnInit() {
+    this.user.currentMessage.subscribe(message => this.LoggedInAs = message)
   }
 
 }
