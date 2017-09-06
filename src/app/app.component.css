@@ -8,3 +8,6 @@
 .dropMore {
   margin-top: 30px;
   position: relative; }
+
+ul {
+  list-style: none; }

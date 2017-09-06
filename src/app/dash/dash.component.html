@@ -1,5 +1,26 @@
 <app-header></app-header>
 
 <div class="dashContent">
-  Logged in as {{LoggedInAs}}.
+  Logged in as {{LoggedInAs}}.<br>
+<input type="text" [(ngModel)]="searchTerm">{{searchTerm}}
+<input type="button" class="btn" (click)='SearchWithItem()' (change)='SearchWithItem()' value="Search">
+  <!-- <ul>
+    <li *ngFor="let Image of data.hits">
+        <img src="{{Image.previewURL}}" alt="alt image"/>
+    </li>
+  </ul> -->
+
+<div class="row">
+  <div>
+    <div *ngFor="let Image of data.hits">
+      <img src="{{Image.previewURL}}" alt="alt image" class="col-sm-4 minm"/><br>
+     tags: {{Image.tags}}<br>
+     views:{{Image.views}}<br>
+     downloads:{{Image.downloads}}<br>
+    </div>      
+  </div>
+</div>
+
+
+  <!-- comments: {{data.hits[9].webformatURL}} -->
 </div>
